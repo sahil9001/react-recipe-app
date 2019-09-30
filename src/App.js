@@ -9,7 +9,7 @@ const App = () => {
     const api_key = process.env.API_KEY;
     const [recipes,setRecipes] = useState([]);
     const [search,setSearch] = useState('');
-    const [query, setQuery] = useState('chicken');
+    const [query, setQuery] = useState('');
     useEffect(() =>{
        getRecipes();
     }, [query]);
@@ -27,7 +27,6 @@ const App = () => {
     const getSearch = e => {
         e.preventDefault();
         setQuery(search);
-        setSearch('');
     }
     return(
        
@@ -36,7 +35,7 @@ const App = () => {
 
             <form onSubmit = {getSearch} className="search-form">
         
-                <input className = "search-bar" type="text" value ={search} onChange={updateSearch}/>
+                <input className = "search-bar" type="text" value ={search} onChange={updateSearch} />
                 <button className = "search-button" type="submit">Submit </button>
             </form>
             <div className="recipes">
