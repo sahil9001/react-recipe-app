@@ -3,11 +3,10 @@ import Recipe from "./Recipe";
 import './App.css';
 
 const App = () => {
-    const APP_ID = '7d68620f';
-    const APP_KEY = '1f59ccc3017c7f153a879f0b15b5b3d7';
-
- 
-
+  
+    require('dotenv').config();
+    const api_id = process.env.API_ID;
+    const api_key = process.env.API_KEY;
     const [recipes,setRecipes] = useState([]);
     const [search,setSearch] = useState('');
     const [query, setQuery] = useState('chicken');
@@ -15,7 +14,7 @@ const App = () => {
        getRecipes();
     }, [query]);
     const getRecipes = async () =>{
-        const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+        const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${api_id}&app_key=${api_key}`);
         const data = await response.json();
         setRecipes(data.hits);
 
