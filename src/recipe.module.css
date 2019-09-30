@@ -12,5 +12,9 @@
 
 .image{
     border-radius: 50%;
-    
+   
+}
+
+.ul{
+    align-items: left;
 }

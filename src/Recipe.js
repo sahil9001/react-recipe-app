@@ -4,9 +4,9 @@ const Recipe= ({title,calories,image,ingredients}) => {
     return(
         <div className={style.recipe}> 
             <h1>{title}</h1>
-            <p>Calories:{calories} cal</p>
+            <p><b>Calories:</b> {Math.round(calories)} cal</p>
             <img className={style.image} src={image} alt=""/>
-            <ul>
+            <ul className={style.ul}>
                 {ingredients.map(ingredient =>(
                     <li>{ingredient.text}</li>
                 ))}
@@ -17,3 +17,4 @@ const Recipe= ({title,calories,image,ingredients}) => {
 };
 
 export default Recipe;
+
