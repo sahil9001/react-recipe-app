@@ -6,13 +6,13 @@ import { Badge, ListGroup } from 'react-bootstrap';
 
 const Recipe= ({title,calories,image,ingredients}) => {
     return(
-        <div className={style.recipe}> 
+        <div className={style.recipe}>
             <img className={style.image} src={image} alt=""/>
             <h1>{title}</h1>
             <p><b>Calories:</b> {Math.round(calories)} cal</p>
             <ListGroup className={style.ul}>
                 {ingredients.map((ingredient, i) =>(
-                    <ListGroup.Item variant={getListVariant(i)}>{ingredient.text}</ListGroup.Item>
+                    <ListGroup.Item key={i} variant={getListVariant(i)}>{ingredient.text}</ListGroup.Item>
                 ))}
             </ListGroup>
             <br></br>
