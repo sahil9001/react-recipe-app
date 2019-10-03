@@ -36,11 +36,10 @@
   padding:10px;
 }
 
-.search-button{
+.search-button.btn.btn-primary{
   background: skyblue;
   border:none;
   padding:10px 20px;
-  margin-left:20px;
   color:white;
 }
 
