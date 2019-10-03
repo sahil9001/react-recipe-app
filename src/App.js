@@ -6,7 +6,7 @@ import Recipe from "./Recipe";
 import { Button } from 'react-bootstrap';
 
 const App = () => {
-  
+
     require('dotenv').config();
     const api_id = process.env.API_ID;
     const api_key = process.env.API_KEY;
@@ -21,7 +21,7 @@ const App = () => {
         const data = await response.json();
         setRecipes(data.hits);
 
-        
+
     };
     const updateSearch = e =>{
         setSearch(e.target.value);
@@ -32,21 +32,21 @@ const App = () => {
         setQuery(search);
     }
     return(
-       
+
         <div className="App">
-              
+
 
             <form onSubmit = {getSearch} className="search-form">
-        
+
                 <input className = "search-bar" type="text" value ={search} onChange={updateSearch} placeholder="Search a recipe"/>
                 <Button variant="primary" className = "search-button" type="submit">Submit</Button>
             </form>
             <div className="recipes">
             {recipes.map(recipe => (
-                <Recipe 
-                key = {recipe.recipe.label} 
-                title = {recipe.recipe.label} 
-                calories={recipe.recipe.calories} 
+                <Recipe
+                key = {recipe.recipe.url}
+                title = {recipe.recipe.label}
+                calories={recipe.recipe.calories}
                 image = {recipe.recipe.image}
                 ingredients = {recipe.recipe.ingredients}/>
             ))}
