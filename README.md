@@ -1,5 +1,5 @@
 ## Recipe Search
-Head over to: [https://searchrec.netlify.com]<br>
+Head over to: [https://searchrec.now.sh]<br>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Available Scripts
 
