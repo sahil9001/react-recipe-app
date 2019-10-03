@@ -25,18 +25,17 @@
 h1{    
     font-weight: 400;
     margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 32px;
 }
 
 .image{
     width: 100%;
 }
 
-.list{
-    width: 100%;
-}
-
-
 .ul{
     text-align: left;
+    width: 100%;
 }
 
