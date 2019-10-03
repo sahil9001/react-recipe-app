@@ -15,7 +15,6 @@ const Recipe= ({title,calories,image,ingredients}) => {
                     <ListGroup.Item variant={getListVariant(i)}>{ingredient.text}</ListGroup.Item>
                 ))}
             </ListGroup>
-
             <br></br>
         </div>
     );
