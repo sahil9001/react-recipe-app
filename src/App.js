@@ -1,6 +1,9 @@
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import React,{useEffect,useState} from 'react';
 import Recipe from "./Recipe";
-import './App.css';
+import { Button } from 'react-bootstrap';
 
 const App = () => {
   
@@ -37,7 +40,7 @@ const App = () => {
             <form onSubmit = {getSearch} className="search-form">
         
                 <input className = "search-bar" type="text" value ={search} onChange={updateSearch} placeholder="Search a recipe"/>
-                <button className = "search-button" type="submit">Submit </button>
+                <Button variant="primary" className = "search-button" type="submit">Submit</Button>
             </form>
             <div className="recipes">
             {recipes.map(recipe => (

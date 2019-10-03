@@ -35,8 +35,8 @@ h1{
     width: 100%;
 }
 
-.ul{    
-    list-style-type: circle;
-    text-align: left;  
-    padding-right: 25px;  
+
+.ul{
+    text-align: left;
 }
+
