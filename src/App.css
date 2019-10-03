@@ -36,10 +36,11 @@
   padding:10px;
 }
 
-.seacrh-button{
+.search-button{
   background: skyblue;
   border:none;
   padding:10px 20px;
+  margin-left:20px;
   color:white;
 }
 
